@@ -6,6 +6,7 @@
 	<meta charset="utf8" />
 	<link rel="stylesheet" href="libraries/bootstrap-3.2.0/css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/helpers.css" />
 </head>
 
 <body class="home-body">
@@ -30,10 +31,22 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Sign In</a></li>
 				<li><a href="#">Register</a></li>
+				<li><a href="#">Browse Experts</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
+
+<div class="container" id="home-search">
+	<div class="row">
+		<div class="col-sm-9">
+			<input class="form-control input-lg" placeholder="Enter Industry, Zipcode, City or Job Role" />
+		</div>
+		<div class="col-sm-3 top-block-margin">
+			<button class="btn btn-primary btn-lg btn-block" id="find-expert-button">Find Expert</button>
+		</div>
+	</div>
+</div>
 
 <script src="libraries/jquery-2.1.1/jquery.js"></script>
 <script src="libraries/bootstrap-3.2.0/js/bootstrap.min.js"></script>

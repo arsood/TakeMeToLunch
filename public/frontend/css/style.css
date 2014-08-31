@@ -23,3 +23,12 @@
 .navbar-tmtl a:hover {
 	color:#06C !important;
 }
+
+#home-search {
+	margin-top:10%;
+	background-color:rgba(0,0,0,0.75);
+	padding:40px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
