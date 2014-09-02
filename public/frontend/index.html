@@ -73,6 +73,14 @@
 	function displayProfiles(profiles) {
 		member = profiles.values[0];
 		console.log(member);
+
+		$.ajax({
+			type:"GET",
+			url:"https://api.linkedin.com/v1/people/id=" + member.id,
+			success:function(data) {
+				console.log(data);
+			}
+		});
 	}
 </script>
 
