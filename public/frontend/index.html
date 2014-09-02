@@ -37,6 +37,8 @@
 	</div><!-- /.container-fluid -->
 </nav>
 
+<button id="linkedin">Log In With LinkedIN</button>
+
 <div class="container" id="home-search">
 	<div class="row">
 		<div class="col-sm-9">
@@ -54,15 +56,14 @@
 
 <script type="text/javascript" src="https://platform.linkedin.com/in.js">
 	api_key: lcvtnsyb1jwj
-	onLoad: onLinkedInLoad
-	authorize: true
+	//onLoad: onLinkedInLoad
+	//authorize: true
 </script>
 
 <script type="text/javascript">
-	// 2. Runs when the JavaScript framework is loaded
-	function onLinkedInLoad() {
-	IN.Event.on(IN, "auth", onLinkedInAuth);
-	}
+	$(document).on("click","#linkedin",function() {
+		IN.Event.on(IN, "auth", onLinkedInAuth);
+	});
 
 	// 2. Runs when the viewer has authenticated
 	function onLinkedInAuth() {
@@ -74,13 +75,13 @@
 		member = profiles.values[0];
 		console.log(member);
 
-		$.ajax({
-			type:"GET",
-			url:"https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code=AUTHORIZATION_CODE&redirect_uri=http://staging.takemetolunch.com&client_id=lcvtnsyb1jwj&client_secret=3iCQW1DOv22l91an",
-			success:function(data) {
-				console.log(data);
-			}
-		});
+		// $.ajax({
+		// 	type:"GET",
+		// 	url:"https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code=AUTHORIZATION_CODE&redirect_uri=http://staging.takemetolunch.com&client_id=lcvtnsyb1jwj&client_secret=3iCQW1DOv22l91an",
+		// 	success:function(data) {
+		// 		console.log(data);
+		// 	}
+		// });
 	}
 </script>
 
