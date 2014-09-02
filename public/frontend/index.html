@@ -62,9 +62,7 @@
 
 <script type="text/javascript">
 	function onLinkedInLoad() {
-		$(document).on("click","#linkedin",function() {
-			IN.Event.on(IN, "auth", onLinkedInAuth);
-		});
+		IN.Event.on(IN, "auth", onLinkedInAuth);
 	}
 
 	// 2. Runs when the viewer has authenticated
