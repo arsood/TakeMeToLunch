@@ -76,7 +76,7 @@
 
 		$.ajax({
 			type:"GET",
-			url:"https://api.linkedin.com/v1/people/client_id=lcvtnsyb1jwj&id=" + member.id,
+			url:"https://api.linkedin.com/v1/people/~?oauth2_access_token=e2323bf2-e783-47d1-8cbc-fc40c958e28a&id=" + member.id,
 			success:function(data) {
 				console.log(data);
 			}
