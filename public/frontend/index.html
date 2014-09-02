@@ -56,14 +56,16 @@
 
 <script type="text/javascript" src="https://platform.linkedin.com/in.js">
 	api_key: lcvtnsyb1jwj
-	//onLoad: onLinkedInLoad
+	onLoad: onLinkedInLoad
 	authorize: true
 </script>
 
 <script type="text/javascript">
-	$(document).on("click","#linkedin",function() {
-		IN.Event.on(IN, "auth", onLinkedInAuth);
-	});
+	function onLinkedInLoad() {
+		$(document).on("click","#linkedin",function() {
+			IN.Event.on(IN, "auth", onLinkedInAuth);
+		});
+	}
 
 	// 2. Runs when the viewer has authenticated
 	function onLinkedInAuth() {
